@@ -1,3 +1,16 @@
+const dayjs = require('dayjs');
+
+const today = dayjs().format('YYYY-MM-DD'); // Get the current day in full text format (e.g. "Thursday")
+
+console.log(today); 
+
+// handle displaying the date
+function displayDate() {
+  
+  var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
+  dateDisplayEl.text(today);
+}
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -21,3 +34,7 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+var projects = readProjectsFromStorage();
+projects.push(newProject);
+saveProjectsToStorage(projects);
