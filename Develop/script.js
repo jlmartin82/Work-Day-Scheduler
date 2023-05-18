@@ -33,6 +33,23 @@ console.log(hour)
 
 //run for loop with comparisons to style .past .present and .future
 
+  timeBlocks.forEach(function(timeBlock) {
+    if (hour < timeBlock) {
+      console.log("Time block ${timeBlock} is in the future.");
+      applyStyling(timeBlock, "future");
+    } else if (hour === timeBlock) {
+      console.log("Time block ${timeBlock} is in the present.");
+      applyStyling(timeBlock, "present");
+    } else {
+      console.log("Time block ${timeBlock} is in the past.");
+      applyStyling(timeBlock, "past");
+    }
+  });
+
+  // Function to apply the CSS styling to the time block
+  function applyStyling(timeBlock, time-block) {
+    $("#hour-${timeBlock}").addClass(time-block);
+  }
 
 
 
