@@ -1,8 +1,8 @@
 $(document).ready(function () {
   const dateDisplayEl = $("#currentDay")
 
-  const today = dayjs().format('YYYY-MM-DD'); // Get the current day in full text format (e.g. "Thursday")
-  
+  const today = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a'); // Get the current day in full text format (e.g. "Thursday")
+  dateDisplayEl.text(today);
   console.log(today); 
   
   $(".saveBtn").on("click", function () {
@@ -13,11 +13,8 @@ $(document).ready(function () {
     localStorage.setItem(time, value)
   })
   //handle displaying the date
-  function displayDate() {
-    
-   var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
-   dateDisplayEl.text(today);
-  }
+ 
+  
 })
 $("#hour-9 .description").val(localStorage.getItem("hour-9"))
 $("#hour-10 .description").val(localStorage.getItem("hour-10"))
@@ -29,6 +26,15 @@ $("#hour-15 .description").val(localStorage.getItem("hour-15"))
 $("#hour-16 .description").val(localStorage.getItem("hour-16"))
 $("#hour-17 .description").val(localStorage.getItem("hour-17"))
 $("#hour-18 .description").val(localStorage.getItem("hour-18"))
+
+
+var hour = dayjs().hour()
+console.log(hour)
+
+//run for loop with comparisons to style .past .present and .future
+
+
+
 
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
