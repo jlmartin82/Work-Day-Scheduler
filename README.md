@@ -14,6 +14,7 @@ Pending
 
 Screenshot 2023-05-18 at 9.44.25 PM.png
 
+![Screenshot 2023-05-18 at 9 44 25 PM](https://github.com/jlmartin82/Work-Day-Scheduler/assets/129562637/defca924-767a-4181-b5f0-4727c0e1f83b)
 
 ## API Reference
 
